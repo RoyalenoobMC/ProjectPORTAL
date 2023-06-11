@@ -1,6 +1,6 @@
 import random
 
-print("1 = Number Guesser \n2 = Calculator \n3 = Grade Calculator\n4 = Random Password Generator")
+print("1: Number Guesser \n2: Calculator \n3: Grade Calculator\n4: Random Password Generator\n5: Luck Games")
 project = int(input("What project would you like to open: "))
 
 if project == 1:
@@ -73,7 +73,7 @@ if project == 3:
     if mode == 1:
         students = int(input("How many students do you have: "))
         q = int(input("How many questions are there: "))
-        print("L = Minimum, H = Highest\nDefault:")
+        print("L: Minimum, H: Highest\nDefault:")
         print(default)
 
         for x in range(1, students + 1):
@@ -108,7 +108,7 @@ if project == 3:
     if mode == 2:
         students = int(input("How many students do you have: "))
         q = int(input("How many questions are there: "))
-        print("L = Minimum, H = Highest P = Plus M = Minus \nAdvanced:")
+        print("L: Minimum, H: Highest P: Plus M: Minus \nAdvanced:")
         print(ad)
 
         for x in range(1, students + 1):
@@ -161,3 +161,114 @@ if project == 4:
         password += chr(random.randint(33, 126))
 
     print("Password: " + password)
+
+if project == 5:
+    ld = []
+    counts = {}
+    counts2 = {}
+    print("1: Coin Flip\n2: Dice Game")
+    lgc = int(input("What luck game would you like to play: "))
+    if lgc == 1:
+        cf = random.randint(0, 2)
+        if cf == 1:
+            print("Heads")
+            ld.append(1)
+        else:
+            print("Tails")
+            ld.append(2)
+        print("1: Yes\n2: No")
+        again = str(input("Would you like to go again: "))
+        while again == 1:
+            cf2 = random.randint(0, 2)
+            if cf2 == 1:
+                print("Heads")
+                ld.append(cf2+1)
+            else:
+                print("Tails")
+                ld.append(cf2+1)
+            print("1: Yes\n2: No")
+            again = str(input("Would you like to go again: "))
+            if again == 1:
+                break
+        mean = sum(ld) / len(ld)
+        for num in ld:
+            counts[num] = counts.get(num, 0) + 1
+
+        mode = max(counts, key=counts.get)
+        if mode == 1:
+            mode2 = "Heads"
+        else:
+            mode2 = "Tails"
+        print("For the Mean: 2 is tails and 1 is heads.")
+        print("Mean(Average): " + str(mean) + "\nMode(Most Frequent): " + mode2)
+    if lgc == 2:
+        print("Game is in development. Some dice rolls might not work.")
+        rd = random.randint(1, 7)
+        ld = []
+        count = {}
+        count2 = {}
+        if rd == 1:
+            print("\n   ●\n")
+            ld.append(1)
+        if rd == 2:
+            print("●\n\n      ●")
+            ld.append(2)
+        if rd == 3:
+            print("     ●\n   ●\n●")
+            ld.append(3)
+        if rd == 4:
+            print("●     ●\n\n●     ●")
+            ld.append(4)
+        if rd == 5:
+            print("●     ●\n   ●\n●     ●")
+            ld.append(5)
+        if rd == 6:
+            print("●  ●  ●\n\n●  ●  ●")
+            ld.append(6)
+        print("1: Yes\n2: No")
+        again = int(input("Would you like to play again: "))
+        while again == 1:
+            rd2 = random.randint(1, 7)
+            if rd2 == 1:
+                print("\n   ●\n")
+                ld.append(1)
+            if rd2 == 2:
+                print("●\n\n      ●")
+                ld.append(2)
+            if rd2 == 3:
+                print("     ●\n   ●\n ●")
+                ld.append(3)
+            if rd2 == 4:
+                print("●     ●\n\n●     ●")
+                ld.append(4)
+            if rd2 == 5:
+                print("●     ●\n   ●\n●     ●")
+                ld.append(5)
+            if rd2 == 6:
+                print("●  ●  ●\n\n●  ●  ●")
+                ld.append(6)
+            print("1: Yes\n2: No")
+            again = int(input("Would you like to play again: "))
+            if again == 2:
+                break
+        mean = sum(ld) / len(ld)
+        for num in ld:
+            counts[num] = counts.get(num, 0) + 1
+
+        mode = max(counts, key=counts.get)
+        print("Mean(Average): " + str(mean))
+        print("Mode:")
+        if mode == 1:
+            print("\n   ●")
+        if mode == 2:
+            print("●\n\n      ●")
+        if mode == 3:
+            print("     ●\n   ●\n●")
+        if mode == 4:
+            print("●     ●\n\n●     ●")
+        if mode == 5:
+            print("●     ●\n   ●\n●     ●")
+        if mode == 6:
+            print("●  ●  ●\n\n●  ●  ●")
+        exit()
+        
