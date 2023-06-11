@@ -10,8 +10,11 @@ Libraries
 
 IF THERE ARE PROBLEMS PLEASE GO TO THE ISSUES AND POST A NEW ONE.
 
+WARNING: open.command ONLY works on MAC
+
 IF YOU WANT TO BE FEATURED GO TO PULL REQUESTS
 
+IF https://github.com/RoyalenoobMC/5ProjectsIn1 is not working go to https://www.mediafire.com/file/34v8p4hwm930tdw/5ProjectsIn1-main.zip/file
 ## TO OPEN ALL THE CODE:
 
 ```
