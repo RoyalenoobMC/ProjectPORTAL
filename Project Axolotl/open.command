@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd "Pathname"
+cd "(Pathname)"
 
 python3 ProjectAXOLOTL.py
