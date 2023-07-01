@@ -2,4 +2,4 @@
 
 cd "(Pathname)"
 
-python3 ProjectAXOLOTL.py
+python3 ProjectPORTAL.py
