@@ -1,12 +1,4 @@
-Project
-
-Algorithms
-Xtensions
-Object-Oriented Programming
-Logic
-Optimization
-Testing
-Libraries 
+Project Portal
 
 IF THERE ARE PROBLEMS PLEASE GO TO THE ISSUES AND POST A NEW ONE.
 
